@@ -1,0 +1,29 @@
+Tugas Posttest
+1.Mencari keyword pada prolog
+  a. Query	: adalah pertanyaan yang dapat diajukan sehubungan dengan fakta-fakta.
+  b. Variable	: terdapat 2 variable yaitu variable bernama dan variable tak bernama.
+		  a.Variable bernama yaitu variable yang diberi nama seperti X, orang, dan sebagainya.
+		  b.Variable tak bernama, dilambangkan dengan tanda garis bawah(_). 
+  c. Klausa	: Klausa adalah suatu ungkapan atau susunan kata yang didalam prolog dapat berupa fakta atau aturan. 
+  d. Domain	: adalah type data.
+		  Contoh: NamaOrang = symbol
+                          Alamat    = string
+                          Umur      = integer
+  e. symbol	: Rangkaian huruf, angka dan garis bawah, asalkan karakter pertama huruf kecil, 
+		  tidak mengandung spasi/karakter khusus.
+  f. Section Goal : Secara esensial, section goal sama dengan body dari sebuah aturan (rule), yaitu sederetan sub-sub goal. 
+		    Perbedaan antara section goal dengan suatu aturan adalah setelah kata kunci goal tidak diikuti tanda :- dan 
+		    Visual Prolog secara otomatis mengeksekusi goal ketika program dijalankan.
+  g. Unifikasi (Unification) : Pada waktu Visual Prolog mencoba untuk mencocokkan suatu panggilan (dari sebuah subgoal) 
+			       ke klausa (pada section clauses), maka proses tersebut melibatkan suatu prosedur yang dikenal dengan unifikasi (unification), 
+			       yang mana berusaha untuk mencocokkan antara struktur data yang ada di panggilan (subgoal) dengan klausa yang diberikan.
+  h. nondeterm	: nondeterm pada section predicates berfungsi untuk memberi tahu compiler bahwa predikat tersebut mempunyai lebih dari satu 
+		  kemungkinan jawaban (non-deterministik).
+		  Contoh: nondeterm lakukan(pohonchar)
+  i. Sections Facts: Visual Prolog menyediakan section khusus untuk mendeklarasikan fakta di program yang menjadi bagian dari 
+		     database dinamis, yaitu section facts.
+  j. Section clauses: Merupakan section yang paling penting pada program Visual Prolog. Pada section inilah kita meletakkan fakta dan aturan. 
+	              Ketika mencari jawaban, Visual Prolog akan mencari dari bagian paling atas dari section clauses, melihat setiap fakta dan aturan 
+		      untuk mendapat jawaban benar, hingga ke bagian paling bawah dari section ini.
+
+
