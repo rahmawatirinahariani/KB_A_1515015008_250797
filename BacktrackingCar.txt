@@ -1,0 +1,37 @@
+predicates
+  buy_car(symbol,symbol) - determ (i,o)
+  car(symbol,symbol,integer) - nondeterm (i,o,o)
+  colors(symbol,symbol) - nondeterm (i,i)
+
+clauses
+  buy_car(Model,Color):-
+	car(Model,Color,Price),
+	colors(Color,sexy),!,
+	Price > 25000.
+
+  car(maserati,green,25000).
+  car(corvette,black,24000).
+  car(corvette,red,26000).
+  car(porsche,red,24000).
+
+  colors(red,sexy).
+  colors(black,mean).
+  colors(green,preppy).
+
+goal
+  buy_car(corvette,Y).
+
+*Penjelasan backtracking yaitu mencari rule sesuai yang diinginkan didalam goal yaitu
+membeli mobil corvette dengan harga mobil lebih dari 25.000 dengan warna dan keterangan sexy.
+1. Mengecek rule awal yaitu car(maserati,green,25000). 
+	Dilihat dari goal yang diinginkan rule yang pertama tidak terpenuhi karena model dan keterangan 
+	dari mobil yang diinginkan tidak sesuai. Selanjutnya mengecek rule yang selanjutnya.
+2.Mengecek rule kedua yaitu car(corvette,black,24000).
+	Rule yang kedua ini model dari mobil tersebut sesuai dengan yang diinginkan digoal 
+	tapi keterangan mobil tersebut tidak sesuai. Jadi kembali lagi ke rule yang diatas.
+3.Mengecek rule ketiga yaitu car(corvette,red,26000).
+	Rule yang ketiga ini model dari mobil dan keterangan mobil sesuai dengan goal karena
+	keterangan mobil yang diinginkan terdapat pada warna merah.
+
+Jadi program backtracking tersebut akan berhenti karena rules yang diinginkan telah didapatkan pada 
+rules yang ketiga. 
